@@ -52,11 +52,15 @@ public class Riddler {
         return decrypted;
     }
 
-    public String decryptThree(String encrypted) {
+    public String decryptThree(String encrypted) { // TODO: test
         String decrypted = "";
-
-        // TODO: Complete the decryptThree() function.
-
+        // Iterate over each 8  bit binary sequence
+        for (int i = 0; i < encrypted.length(); i+=8) {
+            String bytes = encrypted.substring(i, i + 8);
+            // Convert from binary int to letter
+            char letter = (char) Integer.parseInt(bytes, 2);
+            decrypted = decrypted + letter;
+        }
         return decrypted;
     }
 
