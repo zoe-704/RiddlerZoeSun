@@ -8,6 +8,7 @@
  */
 public class Riddler {
 
+    // Puzzle 1: Caesar Cipher
     public String decryptOne(String encrypted) { // TODO: test
         String decrypted = ""; // Initialize empty string for decrypted string
         char base; // Initialize base (depends on if upper/lowercase letter)
@@ -35,15 +36,19 @@ public class Riddler {
         }
         return decrypted;
     }
-
-    public String decryptTwo(String encrypted) {
+    // Puzzle 2: Ascii values
+    public String decryptTwo(String encrypted) { // TODO: test
         String decrypted = "";
-        for (int i = 0; i < encrypted.length(); i++) {
-
+        // Convert numbers from string into ints
+        String[] splits = encrypted.split(" ");
+        int[] nums = new int[splits.length];
+        for (int i = 0; i < splits.length; i++) {
+            nums[i] = Integer.parseInt(splits[i]);
         }
-
-        // TODO: Complete the decryptTwo() function.
-
+        for (int i = 0; i < nums.length; i++) {
+            char letter = (char) nums[i];
+            decrypted = decrypted + letter;
+        }
         return decrypted;
     }
 
