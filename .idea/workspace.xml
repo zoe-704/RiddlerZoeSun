@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1cf25baf-9058-4079-9ddf-884f5b8746a0" name="Changes" comment="Update work log and iml file">
-      <change beforePath="$PROJECT_DIR$/WORK_LOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/WORK_LOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Riddler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Riddler.java" afterDir="false" />
+    <list default="true" id="1cf25baf-9058-4079-9ddf-884f5b8746a0" name="Changes" comment="All project files">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,12 +83,22 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.RiddlerTester.testOne">
+  <component name="RunManager" selected="JUnit.RiddlerTester.testFour">
     <configuration name="RiddlerTester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RiddlerStudentCode" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="RiddlerTester" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RiddlerTester.testFour" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RiddlerStudentCode" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RiddlerTester" />
+      <option name="METHOD_NAME" value="testFour" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -104,7 +113,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RiddlerTester.testThree" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RiddlerTester.testThree (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RiddlerStudentCode" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="RiddlerTester" />
       <option name="METHOD_NAME" value="testThree" />
@@ -134,10 +144,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RiddlerTester.testFour" />
+        <item itemvalue="JUnit.RiddlerTester.testThree (1)" />
+        <item itemvalue="JUnit.RiddlerTester.testTwo" />
         <item itemvalue="JUnit.RiddlerTester.testOne" />
         <item itemvalue="JUnit.RiddlerTester" />
-        <item itemvalue="JUnit.RiddlerTester.testThree" />
-        <item itemvalue="JUnit.RiddlerTester.testTwo" />
       </list>
     </recent_temporary>
   </component>
@@ -189,7 +200,23 @@
       <option name="project" value="LOCAL" />
       <updated>1755935150233</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Update work log and iml file">
+      <option name="closed" value="true" />
+      <created>1756342994239</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1756342994239</updated>
+    </task>
+    <task id="LOCAL-00007" summary="All project files">
+      <option name="closed" value="true" />
+      <created>1756343045824</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1756343045824</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -208,6 +235,7 @@
     <MESSAGE value="Implement puzzle 2" />
     <MESSAGE value="Update work log" />
     <MESSAGE value="Update work log and iml file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update work log and iml file" />
+    <MESSAGE value="All project files" />
+    <option name="LAST_COMMIT_MESSAGE" value="All project files" />
   </component>
 </project>
