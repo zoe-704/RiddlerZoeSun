@@ -14,21 +14,19 @@ public class Riddler {
         char base;
         // Iterate over entire string to decrypt
         for (int i = 0; i < encrypted.length(); i++) {
-            // Only need to decrypt letters
+            // Only decrypt letters
             if (Character.isLetter(encrypted.charAt(i))) {
                 char letter = encrypted.charAt(i);
+                // Adjust base char for upper/lowercase 'a'/'A'
                 if (Character.isUpperCase(encrypted.charAt(i))) {
-                    // base char is 'A' for uppercase letter
                     base = 'A';
                 } else {
-                    // base char is 'a' for lowercase letter
                     base = 'a';
                 }
+                // Shift by 9 to decrypt
+                int shift = 9;
                 // Calculate decrypted ascii value of encrypted letters
-                int relativePosition =  (int) letter - (int) base; // Dist of encrypted letter from base
-                int shift = 9; // Shift by 9 to decrypt
-                int shiftedRelativePosition = (relativePosition + shift) % 26; // Dist including shift and wraparound
-                char shiftedChar = (char) (base + shiftedRelativePosition); // Convert ascii value back to char
+                char shiftedChar = (char) ((letter - base + shift) % 26 + base);
                 decrypted += shiftedChar;
             } else {
                 // Non-letter characters stay the same
@@ -41,17 +39,16 @@ public class Riddler {
     // Puzzle 2: Ascii values
     public String decryptTwo(String encrypted) {
         String decrypted = "";
-        // Convert numbers from string into ints
+        // Parse numbers from string and store in int array
         String[] splits = encrypted.split(" ");
         int[] nums = new int[splits.length];
-        // Parse integers from string
         for (int i = 0; i < splits.length; i++) {
             nums[i] = Integer.parseInt(splits[i]);
         }
         // Convert integers from ascii value to char
         for (int i = 0; i < nums.length; i++) {
-            char letter = (char) nums[i];
-            decrypted += letter;
+            char decoded = (char) nums[i];
+            decrypted += decoded;
         }
         return decrypted;
     }
@@ -59,12 +56,14 @@ public class Riddler {
     // Puzzle 3: Binary 8-bit int
     public String decryptThree(String encrypted) {
         String decrypted = "";
-        // Iterate over each 8  bit binary sequence
+        // Iterate over each 8-bit binary sequence
         for (int i = 0; i < encrypted.length(); i+=8) {
             String bytes = encrypted.substring(i, i + 8);
-            // Convert from binary int to character
-            char letter = (char) Integer.parseInt(bytes, 2);
-            decrypted += letter;
+            // Convert from binary int to base 10 ascii value
+            int ascii = Integer.parseInt(bytes, 2);
+            // Convert ascii value to character
+            char decoded = (char) ascii;
+            decrypted += decoded;
         }
         return decrypted;
     }
@@ -75,11 +74,11 @@ public class Riddler {
         for (int i = 0; i < decrypted.length(); i++) {
             // Get the numerical value of the dingbat character
             int dingbat = decrypted.charAt(i);
-            // Convert from unicode to ascii
+            // Convert from dingbat hex to ascii values
             int ascii = dingbat - 0x2700 + 45;
-            // Convert to character
-            char letter = (char) ascii;
-            decrypted += letter;
+            // Convert ascii value to character
+            char decoded = (char) ascii;
+            decrypted += decoded;
         }
         return decrypted;
     }
